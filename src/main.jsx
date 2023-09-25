@@ -4,12 +4,17 @@ import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 
 import App from './App.jsx'
 import './index.css'
+import GetStart from './components/GetStart/GetStart.jsx'
 
 
 const router = createBrowserRouter([
   {
     path : '/',
     element : <App/>
+  },
+  {
+    path : '/getstart',
+    element : <GetStart/>
   }
 ])
 

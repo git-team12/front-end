@@ -1,0 +1,13 @@
+.bg-mobile{
+    background-image: url(/src/assets/img/Mobile_Frame_BG.png);
+}
+.btn-color{
+    border-radius: 10px;
+    background: linear-gradient(271deg, #5D66E3 0.2%, #FF37B7 100%);
+}
+.cercle{
+    border-radius: 50%;
+}
+.set-spin{
+    animation: spin 5s linear infinite;
+}
