@@ -1,6 +1,6 @@
 import React from 'react'
-import './GetStart.css'  //import css
-import logo from '/Users/User/Desktop/front-end/src/assets/img/Getstarted-img .png'
+import './GetStart.css' //import css
+import logo from '../../assets/img/Getstarted-img .png'
 
 //component below 
 
@@ -8,7 +8,7 @@ const GetStart = () => {
   return (
     <div className='bg-mobile bg-no-repeat bg-cover test1 w-full h-screen justify-center bg-main flex flex-col items-center  pb-2'>
       <div className='w-48 h-48  relative '>
-      <div className='w-48 h-48 btn-color cercle animate-spin set-spin' ></div>
+      <div className='w-48 h-48 btn-color cercle animate-spin set-spin ' ></div>
       <img className='w-[95%] h-[95%]  object-cover rounded-full absolute top-[2.5%] right-[2.5%] ' src={logo} alt="" />
       
       </div>
