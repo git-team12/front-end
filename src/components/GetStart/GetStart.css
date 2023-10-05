@@ -3,11 +3,12 @@
 }
 .btn-color{
     border-radius: 10px;
-    background: linear-gradient(271deg, #5D66E3 0.2%, #FF37B7 100%);
+    background: linear-gradient(90deg, #3A70F7 30%, #FF37B7 70%);
 }
 .cercle{
     border-radius: 50%;
 }
 .set-spin{
     animation: spin 5s linear infinite;
+    box-shadow: 5px 0px 20px #EA3383 ;
 }
