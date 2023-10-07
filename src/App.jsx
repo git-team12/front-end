@@ -4,6 +4,7 @@ import './App.css'
 import Intro from './Intro'
 import Register from './components/Register/Register'
 import GetStart from './components/GetStart/GetStart'
+import Gender from './components/Register/Gender'
 
 const App = () => {
   return (
