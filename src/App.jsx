@@ -9,7 +9,7 @@ import Gender from './components/Register/Gender'
 const App = () => {
   return (
     <>
-    <Register/>
+    <GetStart/>
     </>
   )
 }
