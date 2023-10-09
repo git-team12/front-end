@@ -5,13 +5,14 @@ import { IoMale, IoFemale, IoMaleFemale } from "react-icons/io5";
 const Gender = ({setGender}) => {
   return (
     <div>
-        <div className='hidden'>
-        <div className='relative top-28'>
+        <div className='pt-20'>
+        <div className=''>
           <h2 className='text-center text-3xl font-bold text-white'>Tell us about yourself!</h2>
-          <p className='text-center text-zinc-500'>To give you a better experience we need to know your gender</p>
+          <p className='text-center text-zinc-500'>To give you a better experience </p>
+          <p className='text-center text-zinc-500'>we need to know your gender</p>
         </div>
 
-        <div className="top-60 not-prose relative bg-slate-50 rounded-xl overflow-hidden bg-slate-800/10">
+        <div className=" pt-20  bg-slate-50 rounded-xl overflow-hidden bg-slate-800/10">
           <div className="absolute inset-0 bg-grid-slate-100 [mask-image:linear-gradient(0deg,#fff,rgba(255,255,255,0.6))] dark:bg-grid-slate-700/25 dark:[mask-image:linear-gradient(0deg,rgba(255,255,255,0.1),rgba(255,255,255,0.5))]" >
           </div>
           <div className="relative rounded-xl overflow-auto">
@@ -38,9 +39,9 @@ const Gender = ({setGender}) => {
             </div></div><div className="absolute inset-0 pointer-events-none border border-black/5 rounded-xl dark:border-white/5">
           </div>
         </div>
-        <div className=' relative bg-zinc-800  rounded-md top-96 mx-5 bg-btn'>
+        {/* <div className=' relative bg-zinc-800  rounded-md top-96 mx-5 bg-btn'>
           <button className='text-2xl font-bold text-white text-center  bg-zinc-800 relative  btn'>Next</button>
-        </div>
+        </div> */}
       </div>
     </div>
   )
