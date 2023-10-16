@@ -13,23 +13,20 @@ import Advice from "./components/Advice.jsx";
 import Logout from "./components/Logout.jsx";
 import Layout from "./components/Layout.jsx";
 import Home from "./components/Home/Home.jsx";
+import Register from "./components/Register/Register.jsx";
 import { ActivityContextProvider } from "./components/function.jsx";
 
 const router = createBrowserRouter([
   {
+    path: "/",
+    element: <App />,
+  },
+  {
     element: <Layout />,
     children: [
       {
-        path: "/",
-        element: <App />,
-      },
-      {
         path: "/Home",
         element: <Home />,
-      },
-      {
-        path: "/Getstart",
-        element: <GetStart />,
       },
       {
         path: "/Profile",
@@ -56,6 +53,14 @@ const router = createBrowserRouter([
         element: <Logout />,
       },
     ],
+  },
+  {
+      path: "/Register",
+      element: <Register />,
+  },
+  {
+    path: "/Getstart",
+    element: <GetStart />,
   },
 ]);
 

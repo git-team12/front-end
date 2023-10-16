@@ -11,7 +11,7 @@ import SelectActivity from './components/SelectActivity/SelectActivity'
 const App = () => {
   return (
     <div>
-    <Register />
+    <GetStart />
     </div>
   )
 }
