@@ -58,7 +58,7 @@ const Register = () => {
   }
 
   return (
-    <section className='h-screen bg-[url(".\assets\img\20-SON01830.jpg")] bg-cover bg-center'>
+    <section className='h-screen  bg-cover bg-[url("./assets/img/20-SON01830.jpg")] bg-center'>
       <form action="" method="post">
         {step === 1 && (
           <Data
