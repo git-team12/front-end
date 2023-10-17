@@ -17,7 +17,7 @@ const GetStart = () => {
       <h1 className='text-white font-semibold mt-4 text-4xl'>start your journey</h1>
       <p className='text-white mt-4 mb-10'>Create a workout planto stay fit </p>
       {/* <button className='btn-color text-white text-base my-4 w-5/6 h-10 bg-blue-500 px-2 '><Link to="/Register">Get Stared !</Link></button> */}
-      <Link to="/Register" className='btn-color text-white text-base my-4 w-5/6 h-10 bg-blue-500 px-2 flex items-center'> <button className=' w-full'>Get Stared !</button></Link>
+      <Link to="/Login" className='btn-color text-white text-base my-4 w-5/6 h-10 bg-blue-500 px-2 flex items-center'> <button className=' w-full'>Get Stared !</button></Link>
     </div>
   )
 }
