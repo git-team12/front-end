@@ -3,7 +3,7 @@ import React from 'react'
 const Height = ({setHeight,height}) => {
   return (
     <div>
-        <div className='relative top-20 hidden'>
+        <div className='pt-20'>
         <div className=''>
           <h2 className='text-center text-white text-3xl'>What’s your height?</h2>
           <p className='text-zinc-500 text-center'>This helps us create your personalized plan</p>
@@ -28,9 +28,9 @@ const Height = ({setHeight,height}) => {
 
 
         </div>
-        <div className=' relative bg-zinc-800  rounded-md top-20 mx-5 bg-btn'>
+        {/* <div className=' relative bg-zinc-800  rounded-md top-20 mx-5 bg-btn'>
           <button className='text-2xl font-bold text-white text-center  bg-zinc-800 relative  btn'>Next</button>
-        </div>
+        </div> */}
       </div>
     </div>
   )
