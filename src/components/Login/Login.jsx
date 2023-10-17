@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import Logo from 'D:/FinalProjext/front-end/src/assets/img/Logo.png'
+import Logo from '../../assets/img/logo.png'
 import { IoPersonSharp } from "react-icons/io5";
 import {IoLockClosedSharp} from "react-icons/io5"
 import {FcGoogle} from "react-icons/fc"
@@ -75,7 +75,7 @@ const Login = () => {
                     <div><FcGoogle className=' relative bottom-11 left-8 bg-transparent'/></div>
 
                     <div className="text-center">
-                    <span className="text-white ">Don't have any account? <Link to ="/signup" 
+                    <span className="text-white ">Don't have any account? <Link to ="/register" 
                     className="text-pink-400 font-bold">Sign up</Link> </span>
                     </div>
                 </div>

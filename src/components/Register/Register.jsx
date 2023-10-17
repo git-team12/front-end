@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom';
 import './Register.css'  //import css
 //component below 
 import Data from './Data';
@@ -111,7 +112,7 @@ const Register = () => {
             </div>
           ) : (
             <div className=' relative bg-zinc-800  rounded-md  bg-btn '>
-            <button className='submit-button text-2xl font-bold text-white text-center bg-zinc-800 relative btn  ' type='button' >Login Now!</button>
+            <Link to='/login'><button className='submit-button text-2xl font-bold text-white text-center bg-zinc-800 relative btn  ' type='button' >Login Now!</button></Link>
             </div>
           )}
         </div>
