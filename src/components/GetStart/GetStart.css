@@ -12,6 +12,79 @@ body{
     background: var(--BG-Mobile, linear-gradient(180deg, #000 0%, #181616 100%));
 }
 
+@media (min-width: 769px) {
+    
+.getStarted{
+    width: 400px;
+    height: 400px;
+    position: relative;
+    z-index: 2;
+    border-radius: 100%;
+    border: solid 3px rgba(255, 255, 255, 0.25); /* RGBA color with 50% opacity */
+}
+
+.getStarted img{
+    z-index: 2;
+    width: 100%;
+}
+.NeonPink {
+    width: 200px;
+    height:  200px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    background: var(--Pink500-Primaly);
+    filter: blur(100px);
+    z-index: 1;
+}
+
+.NeonIndigo {
+    width: 200px;
+    height:  200px;    
+    position: absolute;
+    left: 150px;
+    top: 150px;
+    background: var(--Indigo700-Second);
+    filter: blur(100px);
+    z-index: 1;
+  }
+
+
+
+
+
+.set-spin {
+    animation: spin 2.5s linear infinite;
+    width: 300px;
+    height: 300px;
+
+    box-shadow: 5px 0px px 0px #3A70F7, 5px 0px 20px 0px #FF37B7;
+}
+
+@keyframes spin {
+
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+.btn-color{
+    background: linear-gradient(320deg, #3A70F7 30%, var(--Pink500-Primaly) 70%);
+    border-radius: 0.5rem;
+    max-width: 700px;
+}
+
+}
+@media (max-width: 768px) {
+
+    body{
+        height: 100vh;
+        background: var(--BG-Mobile, linear-gradient(180deg, #000 0%, #181616 100%));
+    }
 
 .getStarted{
     width: 300px;
@@ -75,4 +148,6 @@ body{
 .btn-color{
     background: linear-gradient(320deg, #3A70F7 30%, var(--Pink500-Primaly) 70%);
     border-radius: 0.5rem;
+}
+
 }

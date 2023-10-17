@@ -1,11 +1,31 @@
-import React from 'react'
-import './Chart.css'  //import css
-//component below 
+// import React, { PureComponent } from 'react';
+// import { PieChart, Pie, Sector, Cell, ResponsiveContainer,Tooltip  } from 'recharts';
 
-const Chart = () => {
-  return (
-    <div>Chart</div>
-  )
-}
+// const data = [
+//   { name: 'Caloriess', value: 400 },
+// ];
 
-export default Chart
+// const colors = ["#EC4899"];
+
+// const CustomPieChartWithPadding = () => (
+//   <PieChart width={400} height={400}>
+//     <Pie
+//       data={data}
+//       dataKey="value"
+//       nameKey="name"
+//       cx="50%"
+//       cy="50%"
+//       outerRadius={80}
+//       startAngle={90}
+//       endAngle={450}
+//       paddingAngle={30} // Adjust this value for the padding angle
+//     >
+//       {data.map((entry, index) => (
+//         <Cell key={`cell-${index}`} fill={colors[index % colors.length]} />
+//       ))}
+//     </Pie>
+//     <Tooltip />
+//   </PieChart>
+// );
+
+// export default CustomPieChartWithPadding;

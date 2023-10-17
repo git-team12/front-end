@@ -1,22 +1,22 @@
 import React from "react";
-import "./GetStart.css"; //import css
-import logo from "../../assets/img/Getstarted-img .png";
+// import "./GetStart_Mobile.css"; //import css
+import getstartedIMG from "../../assets/img/Getstarted-img.svg";
 
 //component below
 
 const GetStart_Mobile = () => {
   return (
-    <div className="bg-mobile bg-no-repeat bg-cover test1 w-full h-screen justify-center bg-main flex flex-col items-center  pb-2">
+    <div className="--mobile bg-mobile bg-no-repeat bg-cover test1 w-full h-screen justify-center bg-main flex flex-col items-center  pb-2">
       <div className="w-300 h-300  relative ">
      
         <div className="getStarted  cercle ">
-        <img className=' object-cover rounded-full absolute get-Started_IMG' src={logo} alt="" />
+        <img className=' object-cover rounded-full absolute get-Started_IMG' src={getstartedIMG} alt="" />
         <div className="set-spin">
 
           <article className="NeonPink"/>
           <article className="NeonIndigo"/>
           </div>
-        </div>
+        </div> 
 
       </div>
 
