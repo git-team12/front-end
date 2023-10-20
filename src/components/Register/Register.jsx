@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom';
-import './Register.css'  //import css
+//import css
+import './Register.css' 
+
 //component below 
 import Data from './Data';
 import Addprofile from './Addprofile';

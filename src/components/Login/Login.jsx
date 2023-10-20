@@ -1,89 +1,110 @@
-import React from "react";
 import { useState } from "react";
-import Logo from '../../assets/img/logo.png'
+import Logo from "../../assets/img/logo.png";
 import { IoPersonSharp } from "react-icons/io5";
-import {IoLockClosedSharp} from "react-icons/io5"
-import {FcGoogle} from "react-icons/fc"
-import { Link} from "react-router-dom";
+import { IoLockClosedSharp } from "react-icons/io5";
+import { FcGoogle } from "react-icons/fc";
+import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
+// Style 
+import { inputStyles } from "./inputStyles"; // Import the styles
+import "./Login.css";
 
 const Login = () => {
-
-  const [Urusername,setUserName] = useState('');
-  const [Urpassword,setPassword] = useState();
+  const [Urusername, setUserName] = useState("");
+  const [Urpassword, setPassword] = useState("");
   const navigate = useNavigate();
 
-  const checkLogin = () =>{
+  const checkLogin = () => {
     const data = {
-      username : 'Admin',
-      password : 123456
+      username: "Admin",
+      password: 123456,
+    };
+    console.log(data);
+    if (data.username === Urusername || data.password === Urpassword) {
+      navigate("/home");
+    } else {
+      console.log(data.username, Urusername);
+      alert("Invalid name or password");
+          // Refresh the page
+    window.location.reload();
     }
-    console.log(data)
-      if(data.username === Urusername || data.password === Urpassword){
-          navigate('/home')
-          
-      }else{
-        console.log(data.username,Urusername)
-          alert('Invalid name or password')
-      }
-  }
+  };
   return (
-    <section className='h-screen bg-[url(".\assets\img\20-SON01830.jpg")] bg-cover bg-center'>
-    <div className="flex flex-col items-center w-screen pt-32 ">
-                <div className="">
-                <img src={Logo} alt="logo" />
-                </div>
+    <div className='h-screen bg-[url(".\assets\img\20-SON01830.jpg")] bg-cover bg-center flex'>
+      <main className={`${inputStyles.mainSection}`}>
+        <img src={Logo} alt="logo" />
 
-                <div id='form-login' className="grid gap-5 w-full px-4 pt-6">
-                    
-                <form className='flex flex-col w-full'>
-                    <div className='relative top-6 h-2 left-2 '>
-                        <IoPersonSharp className='fill-white'/>
-                    </div>
-                    <input type="text" placeholder='Enter Your Username' 
-                    className="text-center rounded-md p-3 bg-gray-600"
-                    value={Urusername}
-                    onChange={(e)=> setUserName(e.target.value)}/>
-                </form>
-                    
-                    <form className='flex flex-col w-full'>
-                        <div className='relative top-6 h-2 left-2'>
-                            <IoLockClosedSharp className='fill-white'/>
-                        </div>
-                        <input type="password" placeholder='Enter Your Password' 
-                        className="text-center rounded-md p-3 bg-gray-600 "
-                        value={Urpassword}
-                        onChange={(e)=> setPassword(e.target.value)}/>
-            
-                </form>
-                    <span className="text-white text-xs text-end"><Link to ='/reset'>Forget your password</Link></span>
-                </div>
-
-                <div className="w-full px-4 pt-8 space-y-3">
-                    <div className="bg-white w-full 
-                    rounded-lg p-0.5 bg-gradient-to-r from-pink-500  via-black to-purple-600 ">
-                        <button className="bg-black w-full p-3 rounded-lg text-white" onClick={(checkLogin)}
-                        type="button">Login</button>
-                    </div>
-
-                    <div className="bg-white w-full 
-                    rounded-lg p-0.5 bg-gradient-to-r from-pink-500  via-black to-purple-600">
-                        <button className="bg-black w-full p-3 rounded-lg text-white">Continues with google</button>
-                    </div>
-                    <div><FcGoogle className=' relative bottom-11 left-8 bg-transparent'/></div>
-
-                    <div className="text-center">
-                    <span className="text-white ">Don't have any account? <Link to ="/register" 
-                    className="text-pink-400 font-bold">Sign up</Link> </span>
-                    </div>
-                </div>
+        <section id="form-login" className="grid gap-4 w-full">
+          <form className="flex flex-col xl:max-w-4xl xl:text-base">
+          <label className={`${inputStyles.label}`}>Username</label>
+            <div className="relative">
+              <IoPersonSharp className="absolute left-3 top-1/2 transform -translate-y-1/2 fill-white" />
+              <input
+                type="text"
+                placeholder="Enter Your Username"
+                className={`${inputStyles.base} ${inputStyles.focus}`}
+                value={Urusername}
+                onChange={(e) => setUserName(e.target.value)}
+              />
             </div>
-       
-    </section>
-  )
-}
+          </form>
+          <form className="flex flex-col xl:max-w-4xl">
+            <label className={`${inputStyles.label}`}>Password</label>
+            <div className="relative">
+              <IoLockClosedSharp className="absolute left-3 top-1/2 transform -translate-y-1/2 fill-white text-lg sm:text-xl" />
+              <input
+                type="password"
+                placeholder="Enter Your Password"
+                className={`${inputStyles.base} ${inputStyles.focus}`}
 
+                value={Urpassword}
+                onChange={(e) => setPassword(e.target.value)}
+              />
+            </div>
+          </form>
+
+          <span className="text-white text-base text-end sm:text-xl">
+            <Link to="/reset">Forget your password</Link>
+          </span>
+        </section>
+
+        {/* Button */}
+        <section className="w-full gap-4 grid ">
+          <article className="w-full overflow-hidden rounded-md">
+            <button
+              className="btn_button fade-in p-3  w-full text-white text-xl"
+              onClick={checkLogin}
+              type="button"
+            >
+              Login
+            </button>
+          </article>
+
+          <article className="w-full overflow-hidden rounded-md">
+            <button
+              className="btn_button fade-in p-3  w-full text-white text-xl flex align-center items-center justify-center"
+              onClick={checkLogin}
+              type="button"
+            >
+              <FcGoogle className="w-10" />
+              Continues with google
+            </button>
+          </article>
+          
+        </section>
+
+        <section className="text-center">
+          <span className="text-white ">
+            Don't have any account?{" "}
+            <Link to="/register" className="text-pink-400 font-bold">
+              Sign up
+            </Link>{" "}
+          </span>
+        </section>
+      </main>
+    </div>
+  );
+};
 
 export default Login;

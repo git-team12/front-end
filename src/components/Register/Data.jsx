@@ -1,4 +1,5 @@
 import React from 'react'
+import { inputStyles } from './inputStyles'
 
 const Data = (
   {
@@ -15,14 +16,14 @@ const Data = (
   }) => {
   return (
     <div>
-      <div className='pt-20'>
-        <div className=' '>
-          <h1 className='text-white text-center text-3xl'>Create new account</h1>
+      <div className='flex flex-col justify-center h-screen gap-4'>
+        <div className=''>
+          <h1 className='text-white text-center text-2xl'>Create new account</h1>
           <p className='text-zinc-500 text-center '>join with us in Healthy Impress !</p>
         </div>
 
-        <div className='px-5 flex flex-col gap-5 mt-16'>
-          <input type="text" className='input_text block w-full  text-xl bg-zinc-700 bg-opacity-60 text-white p-4 rounded-md' placeholder='Enter your username' required value={username} onChange={(e) => setUsername(e.target.value)} />
+        <div className={`${inputStyles.mainSection}`}>
+          <input type="text" className={`${inputStyles.base},${inputStyles.focus}`} placeholder='Enter your username' required value={username} onChange={(e) => setUsername(e.target.value)} />
           <input type="email" className='input_text block w-full  text-xl bg-zinc-700 bg-opacity-60 text-white p-4 rounded-md' placeholder='Enter your email' required value={email} onChange={(e) => setEmail(e.target.value)} />
           <input type="password" className=' input_text block w-full  text-xl bg-zinc-700 bg-opacity-60 text-white p-4 rounded-md' placeholder='Enter your password' required value={password} onChange={(e) => setPassword(e.target.value)} />
           <input type="password" className=' input_text block w-full  text-xl bg-zinc-700 bg-opacity-60 text-white p-4 rounded-md' placeholder='Confirm your password' required value={password2} onChange={(e) => setPassword2(e.target.value)} />
